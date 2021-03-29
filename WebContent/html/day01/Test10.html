@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type ="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type ="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<div class="w3-content mxw600">
+		<h1 class="w3-blue w3-center w3-padding w3-card" id="ttl">연령대답기</h1>
+		<div class="w3-col w3-margin-top w3-card">
+			<h3 id="data" class="w3-center">입력 나이: <span id="idata"></span></h3>
+			<h3 class="w3-center w3-text-blue">연령대: <span id="sdata"></span></h3>
+		</div>
+	</div>
+<script type="text/javascript">
+	/*
+	문제 )
+		나이를 입력받아서 위 화면을 완성해주세요
+		연령대는 
+		유년기
+		10대
+		20대
+		30대
+		어른
+		으로 구분처리 하세요
+	*/
+	var sdata = '';
+	var no =prompt('나이를 입력하세요!');
+	document.getElementById('idate').innerHTML=no;
+	
+	if(idate<10){
+		sdata='유년기';
+	}else if(idate<20){
+		sdata='10대';
+	}else if(idate<30){
+		sdata='20대';
+	}else if(idate<40){
+		sdata='30대';
+	}else{
+		sdata='어른';
+	}
+	document.getElementById('sdata').innerHTML = sdata;
+</script>
+</body>
+</html>
