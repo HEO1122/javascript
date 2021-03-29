@@ -34,15 +34,15 @@
 	*/
 	var sdata = '';
 	var no =prompt('나이를 입력하세요!');
-	document.getElementById('idate').innerHTML=no;
+	document.getElementById('idata').innerHTML=no;
 	
-	if(idate<10){
+	if(no<10){
 		sdata='유년기';
-	}else if(idate<20){
+	}else if(no<20){
 		sdata='10대';
-	}else if(idate<30){
+	}else if(no<30){
 		sdata='20대';
-	}else if(idate<40){
+	}else if(no<40){
 		sdata='30대';
 	}else{
 		sdata='어른';
