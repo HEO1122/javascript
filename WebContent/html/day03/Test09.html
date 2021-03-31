@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type ="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type ="text/css" href="../../css/user.css">
+
+<!--  for 문 이용한 2차원 배열 만들기 -->
+
+<script type="text/javascript">
+	var data= [];
+	for(var i =0; i<10; ++i){
+		data[i]=[String(i+"-"+0),String(i+"-"+1),String(i+"-"+2)];
+	}
+	document.write(data);
+	/*function printData(){
+		for(var x =0; x<data.length; x++){
+			for(var y=0; y<data[x].length; y++){
+				document.write(data[x][y] + "");
+			}
+			document.write("</p>");
+		}	
+		document.write("<a href='40_arr.html'.돌아가기</a>");
+	}*/
+	
+</script>
+	<button type ="button" onclick ="printData()">전체 배열 데이터 보기</button>
+</head>
+<body>
+
+</body>
+</html>
