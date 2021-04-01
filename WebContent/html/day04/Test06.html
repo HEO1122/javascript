@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel= "stylesheet" type="text/css"href="../../css/w3.css">
+<link rel= "stylesheet" type="text/css"href="../../css/user.css">
+</head>
+<body>
+	<div class="w3-content mxw600 w3-center">
+		<h1 class="w3-col w3-orange">여기는 Test0601 페이지</h1>
+		<div class="w3-row w3-margin-top">
+			<div class="w3-col w3-button w3-blue w3-hover-aqua" id="btn" >이전페이지로 이동</div>
+		</div>
+	</div>
+
+<script type= "text/javascript">
+	document.getElementById('btn').onclick = function(){
+		location.href ='Test0601.html?id=ys&name=박용수';
+	}
+	//이 바식은 페이즈를 get방식으로 요청하는 방법
+	
+	/*서버에 데이터를 전달하면서 요청하는 방법
+	
+	1. get
+			-url에 요청내용이 모두 보여지는 방식
+	2. post
+			-header에 내용을 숨겨서 전달하는 방식
+	*/
+</script>
+</body>
+</html>
