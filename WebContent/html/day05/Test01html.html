@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type ="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type ="text/css" href="../../css/user.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+	var reg =/^.{3}$/;
+	var reg2 = /^[.]{2}$/; // =/^\.{2}$/;
+	/*
+	참고 )
+	정규표현식에서 .은 모든 문자를의미한다.
+	주의) 
+		[]안에 .을 쓰면 이때는 .을 의미한다.
+		
+	*/
+	var str = prompt('문자열입력');
+	
+	if(reg.test(str)){
+		alert('세글자');
+	}else{
+		alert('3글자가 아님');
+	}
+	
+	if(reg2.test(str)){
+		alert('.이 두개..');
+	}else{
+		alert('형식에 맞지 않음');
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type ="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type ="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/w3color.js"></script>
+
+<style type="text/css">
+	label{
+		color : grey;
+		font-size:14pt;
+		font-weight: bold;
+		margin: 12px 0px;
+		padding-right :10px;
+	}
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+
+<div class ="w3-content mxw600">
+	<h1 class="w3-blue w3-center w3-card-4">현재시간</h1>
+	<div class="w3-col w3-margin-top w3-card-4 w3-padding">
+		<label class="w3-col s4 w3-right-align"></label>
+		<h3 class="w3-col s8"id="d1">dateString</h3>
+		<h3 class="w3-col s8"id="d2">ISO String</h3>
+		<h3 class="w3-col s8"id="d3">JSON</h3>
+		<h3 class="w3-col s8"id="d4">Locale Date String :</h3>
+		<h3 class="w3-col s8"id="d5">Locale Time String :</h3>
+		<h3 class="w3-col s8"id="d6">Locale String :</h3>
+		<h3 class="w3-col s8"id="d7">String :</h3>
+		<h3 class="w3-col s8"id="d8">Time String :</h3>
+		<h3 class="w3-col s8"id="d9">UTC String : </h3>
+	</div>
+</div>
+<script type="text/javascript">
+	var tlist =document.getElementsByTagName('h3');
+	for(i=0; i<tlist.length;i++){
+		
+			tlist[i].classList.add(w3color[i +1]);
+	}
+		
+	});
+	
+	//ISO : 국제표준화기구
+	//UTC : 국제표준시
+	var today = new Date();
+	document.getElementById('d1').innerHTML = today.toDateString();
+	document.getElementById('d2').innerHTML = today.toISOString();
+	document.getElementById('d3').innerHTML = today.JSON();
+	document.getElementById('d4').innerHTML = today.toLocaleDateString();
+	document.getElementById('d5').innerHTML = today.toLocaleTimeString();
+	document.getElementById('d6').innerHTML = today.toLocaleString();
+	document.getElementById('d7').innerHTML = today.toString();
+	document.getElementById('d8').innerHTML = today.toTimeString();
+	document.getElementById('d9').innerHTML = today.toUTCString();
+</script>
+</body>
+</html>
