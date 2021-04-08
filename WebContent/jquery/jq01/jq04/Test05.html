@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel= "stylesheet" type="text/css"href="../../css/w3.css">
+<link rel= "stylesheet" type="text/css"href="../../css/user.css">
+<script type= "text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<script type= "text/javascript" src="../../js/w3color.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+	//color setting	
+	for(i=0;i<4;i++){
+	//		$('.inblock').eq(i).addClass('<div class="w3color'+[i+7]+'></div>'); 태그를 넣음 안됨 클래스만 넣을것
+	$('.inblock').eq(i).addClass(w3color[i+7]);
+		}
+	
+		function sleepTo(el){
+			confirm('확인');
+		}
+		//hide()
+		$('#d1').click(function(){
+			$(this).toggle(500, sleepTo);
+/* 			$(this).hide(500, sleepTo); */ //참고 toggle :show 와 hide 를ㄹ 번갈아가면서 진행
+
+			$('#d1').toggle(500);
+		});
+		$('#d2').click(function(){
+			$(this).fadeToggle(1000, sleepTo).fadeIn(1000);// out과in을 번갈아가면서 함
+			//$(this).fadeOut(1000, sleepTo).fadeIn(1000);
+		});
+		
+		$('#d3').click(function(){
+			$(this).fadeTo(1000, 0.5, sleepTo).fadeTo(1000,1,sleepTo);
+		});
+		$('#d4').click(function(){
+			$(this).slideUp(1000, sleepTo).slideDown(1000);
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content margin-top mxw600 w3-center">
+		<div class="inblock cntnt100" id="d1">hide</div>
+		<div class="inblock cntnt100" id="d2">fadeOut</div>
+		<div class="inblock cntnt100" id="d3">fade</div>
+		<div class="inblock cntnt100" id="d4">slide</div>
+	</div>
+
+
+</body>
+</html>
