@@ -57,18 +57,43 @@
 		<div class="birth id">
 			<div class="idline">
 				<h3 class="text-left id_title">생년월일</h3>
-				<span class="birth_box id_box"> <input type="text" id="bth"
-					name="bth">
+				<div>
+				<span class="birth_box"> <input type="text" id="bth"
+					name="bth"placeholder="년(4자)">
 				</span>
+				<div id="bthbox">
+					<select name="month" id="month">
+						<option value="jan">1</option>
+						<option value="feb">2</option>
+						<option value="mar">3</option>
+						<option value="apr">4</option>
+						<option value="may">5</option>
+						<option value="jun">6</option>
+						<option value="jul">7</option>
+						<option value="aug">8</option>
+						<option value="sep">9</option>
+						<option value="oct">10</option>
+						<option value="nob">11</option>
+						<option value="dec">12</option>
+					</select>
+				</div>
+				<span class="birth_box"><input type="text" id="bth"
+					name="bth" placeholder="일">
+				</span>
+				</div>
 			</div>
 		</div>
 
 		<div class="gen id">
 			<div class="idline">
 				<h3 class="text-left id_title">성별</h3>
-				<span class="gen_box id_box"> <input type="text" id="gen"
-					name="gen">
-				</span>
+				 
+					<select name="gen" id="gen">
+						<option value="male">남자</option>
+						<option value="female">여자</option>
+						<option value="none">선택안함</option>
+					</select>
+				
 			</div>
 		</div>
 
@@ -76,7 +101,7 @@
 			<div class="idline">
 				<h3 class="text-left id_title">본인 확인 이메일(선택)</h3>
 				<span class="mail_box id_box"> <input type="text" id="mail"
-					name="mail">
+					name="mail" placeholder="선택입력">
 				</span>
 			</div>
 		</div>

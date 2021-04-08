@@ -51,8 +51,16 @@ input{
 }
 
 #lock1{
-	width:24px;
-	height:24px;
+	   display: block;
+       margin: 0px;
+       margin-top: 12px;
+       height: 24px;
+       width: 24px;
+       background-image: url(https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png);
+       background-repeat: no-repeat;
+       background-position: 0px 0px;
+       background-size: 135px 80px;
+       background-color: white;
 }
 #lock2{
 	width:24px;
@@ -60,4 +68,38 @@ input{
 }
 .text-left {
 	text-align: left;
+}
+.birthbox{
+	display: inline-block;
+	width: 153px;
+	height: 51px;
+	border: 1px solid  #dadada;
+	padding : 10px 10px 10px 14px;
+}
+#month {
+	display: inline-block;
+	width: 147px;
+	height:51px;
+}
+
+#bth{
+	border: 1px solid  #dadada;
+	width:147px;
+	height:51px;
+	display:inline-block;
+	line-height:29px;
+	font-size:15px;
+	text-align:left;
+}
+#bthbox{
+	display:inline-block;
+	width: 147px;
+	height:51px;
+}
+#gen{
+	display:inline-block;
+	width :460px;
+	height: 51px;
+	border: 1px solid  #dadada;
+	padding : 10px 10px 10px 14px;
 }
