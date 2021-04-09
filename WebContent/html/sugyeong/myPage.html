@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자기소개서</title>
+  <link rel="stylesheet" type="text/css" href="../../css/w3.css">
+  <link rel="stylesheet" type="text/css" href="../../css/user.css">
+  <script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<style>
+.text{
+	text-size : 250pt;
+	text-weight : bold;
+	margin : 10px;
+	
+}
+.outline{
+	border : 2px solid black;
+	width : 300px;
+	/* height : 350px; */
+	text-align: center;
+	margin-top: 40px;
+	margint-left: 200px;
+	
+	
+}
+
+.textcolor{
+ 
+	background-color : gray;
+}
+  
+img{
+	width :250px;
+	height : auto;
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$('#obtn').click(function(){
+			alert('확인되었습니다.');
+		});
+		
+		$('#cbtn').click(function(){
+			alert('취소되었습니다.');
+		});
+		
+	$('#rainbow').click(function(){
+		$('.text').removeClass('textcolor');
+		$('.outline > .text:nth-child(1)').toggleClass('w3-red');
+		$('.outline > .text:nth-child(3)').toggleClass('w3-yellow');
+		$('.outline > .text:nth-child(4)').toggleClass('w3-orange');
+		$('.outline > .text:nth-child(5)').toggleClass('w3-green');
+		$('.outline > .text:nth-child(6)').toggleClass('w3-blue');
+		$('.outline > .text:nth-child(7)').toggleClass('w3-purple');
+	});
+	
+	$('#hide').click(function(){
+		$('h3').toggleClass('w3-hide');
+	});
+	
+	
+	});
+
+</script>
+</head>
+<body>
+
+	<div class="outline w3-content" id="tool">
+		<div class="text"id="name">
+			이름 : 허수경
+		</div>
+		<img src="../../img/avatar/img_avatar1.png">
+		<div class="text textcolor">
+			나이 : 25
+		</div>
+		<div class="text textcolor">
+			사는 곳 : 군포
+		</div>
+		<div class="text textcolor">
+			취미 : 드라마, 영화 보기, 맛집탐방
+		</div>
+		<div class='text textcolor'>
+			좋아하는 음식 : 고기류, 단 것들
+		</div>
+		<div class="text textcolor">
+			목표 : 취업
+		</div>
+		<div class="w3-half w3-button w3-pink w3-hover-orange" id="obtn">
+			확인
+		</div>		
+		<div class="w3-half w3-button w3-orange w3-hover-pink" id="cbtn">
+			취소
+		</div>
+		<div class="w3-round w3-button w3-border w3-margin w3-hover-red" id="rainbow">
+			무지개버튼
+		</div>	
+		<div class="w3-round w3-button w3-border w3-maring w3-hover-blue" id="hide">??</div>	
+	</div>
+	<h3 class=" w3-hide w3-center w3-padding w3-card w3-lime">깜짝 버튼</h3>
+</body>
+</html>

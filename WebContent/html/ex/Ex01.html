@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../css/w3-colors-flat.css">
+<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/w3color.js"></script>
+<style type="text/css"></style>
+<script type="text/javascript">
+/*
+	초기화 버튼을 클릭하면 아이디가 fr인 태그의 배경색상을 w3-pink로 적용시키고
+	순서화 버튼을 클릭하면 w3color 배열에 있는 클래스를 하나씩 꺼내서 적용시키세요
+
+*/
+
+	$(document).ready(function(){
+		var idx= 0;
+		function setIdx(no){
+			idx=no;
+		}
+		
+		
+		function getIdx(){
+			
+		var no =idx;
+		return no;
+		
+		}
+		
+		//초기화버튼
+		$('#ibtn').click(function(){
+			var indx =getIdx();
+			if(indx !=0){
+				$('#fr').removeClass(w3color[idx-1]);
+			}
+			$('#fr').addClass('w3-pink');
+		
+		});
+		//순서화버튼
+		$('#sbtn').click(function(){
+			var indx =getIdx();
+			setIdx(indx +1);
+			if(('#fr').hasClass('w3-pink')){
+				$('#fr').removeClass('w3-pink');
+			}
+			if(indx !=0){
+				$('#fr').removeClass(w3color[indx -1]);
+			}
+			$('#fr').addClass(w3color[indx]);
+			
+		});
+		
+		$('#sbtn').click(function(){
+	         var classList = $('#fr').attr('class').split(/\s+/);
+	         alert(classList);
+	         $.each(classList, function(index, item) {
+	             if (w3color.includes(item)) {
+	               $('#fr').removeClass(item);
+	               var index = w3color.indexOf(item);
+	               $('#fr').addClass(w3color[index+1]);
+	                
+	             } else {
+	                $('#ibtn').click();
+	             }
+	         }); 
+
+	      });
+		
+	});
+
+
+
+</script>
+</head>
+<body>
+	<div class="w3-content mxw600 w3-center">
+		<h1 class="w3-margin-top w3-margin-bottom w3-pink">이벤트 테스트</h1>
+		<div class="w3-col w3-margin-bottom w3-card-4" style="width:100%; height :150px;" id="fr">frame</div>
+		<div class="w3-col w3-card-4">
+			<div class="w3-half w3-red w3-button"id="ibtn">초기화</div>
+			<div class="w3-half w3-blue w3-button" id="sbtn">순서화</div>
+			
+		</div>
+	</div>
+</body>
+</html>
