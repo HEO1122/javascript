@@ -1,0 +1,45 @@
+WEB에서 사용하는 언어 3가지
+
+HTML
+-구조
+
+CSS
+-꾸미고
+
+JS
+-동작
+
+자바스크립트에서
+/^ $/ 가 없으면 /ABC/ 는 문자열안에 ABC만 포함되어있음 통과된다.
+
+자바스크립트 객체
+  제일 상위 (window)
+내장객체, 	  document,   				browser
+|String		|html 문서를 다 읽은 다음에 만들어진다.	| location 같은애들
+|Array		|image, *form, frame 객체가 있다.		
+		|$(선택자).append = 태그 하단에 태그추가
+		|새롭게 추가되는 것들은 이벤트 처리가 안됨
+		|해결방안: 위에서 그 아래 태그선택 후 이벤트 추가
+		| 함수 정의 후 추가.		
+			
+태그 선택 방법 (
+	id는 한개만 선택 가능 document.getElementById('')
+
+="" 로 속성줄 수 있는 것=0 attribute                       getAttribute()  = attr()
+readonly, disabled =property 단어만으로 속성부여     getProperty() = prop()  /예 prop('readonly', true) :  readonly 속성 부여하는 방법
+
+자바스크립트 style.display=' ' 
+제이쿼리 : .css(' ')
+
+일반태그
+변수들 뒤에 괄호가 붙지 않는다.
+innerHTML
+innerText
+textContent
+
+입력태그
+value (강제로 인풋태그에 데이터 채워주겠다. 
+getAttribute
+
+자바스크립트 : document.getElementById("id").value="gura";
+제이쿼리 : $('#id').val("gura");
